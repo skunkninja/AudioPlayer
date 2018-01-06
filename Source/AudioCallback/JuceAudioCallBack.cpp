@@ -11,11 +11,14 @@ CJuceAudioCallBack::~CJuceAudioCallBack(void)
 
 void CJuceAudioCallBack::audioDeviceAboutToStart (AudioIODevice* device)
 {
-	(void *)device;
+    String debuginfo;
+    debuginfo << "Sample rate:" << device->getCurrentSampleRate() << ", Buffer size:" << device->getCurrentBufferSizeSamples();
+    DBG(debuginfo);
 }
 
 void CJuceAudioCallBack::audioDeviceStopped()
 {
+    //device stopped.
 }
 
 //处理录音数据/填充播放数据的回调函数
@@ -41,18 +44,13 @@ void CJuceAudioCallBack::audioDeviceIOCallback (const float** inputChannelData,
     numInputChannels += 0;
     float sampleval;
     
-    //从效率来说，一个通道一个通道的填比较好，不过这儿只是测试，就按采样来填。
-
-    for (int i = 0; i < numSamples; ++i)
+    for(int i = 0;i < numOutputChannels;i++)
     {
-        for(int j = 0;j < numOutputChannels;j++)
+        for (int j = 0; j < numSamples; j++)
         {
-            outputChannelData[j][i] = 0.0f;
+            //outputChannelData[i][j] = 0.0f;
+            outputChannelData[i][j] = sin(j*3.1415926 * 4 / 48);
         }
     }
 }
 
-void CJuceAudioCallBack::setPlayEnable(bool enable)
-{
-    playEnable = enable;
-}

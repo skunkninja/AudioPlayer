@@ -72,13 +72,13 @@ public:
 
     /** Called to indicate that the device has stopped. */
     void audioDeviceStopped() override;
+
     
-    void setPlayEnable(bool enable);
 protected:
-    //CMidiLayer *pSoftSynth;
-	float sinVal[96];
-	int leftIndex, rightIndex;
-    bool playEnable;
+    float *playBuffer;  //解码后的音频数据缓存地址
+    int playBufferSize; //缓存的大小 1.必须为2的指数大小 2.不要小于音频设备的缓冲区大小,否则会出现问题
+    int inPointer;      //音频缓冲区进
+    int outPointer;     //音频缓冲区出
 };
 
 #endif

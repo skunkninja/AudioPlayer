@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="XMXnzs" name="AudioPlayer" displaySplashScreen="1" reportAppUsage="1"
+              splashScreenColour="Dark" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.AudioPlayer" includeBinaryInAppConfig="1"
+              cppLanguageStandard="11" companyCopyright="" jucerVersion="5.2.0">
+  <MAINGROUP id="LZ1ULm" name="AudioPlayer">
+    <GROUP id="{F723ED96-5DF3-AAEC-D7CD-30A2F10C62E9}" name="Source">
+      <GROUP id="{03CBA620-3EC9-5FA8-C417-456F6EB2CFA6}" name="AudioCallback">
+        <FILE id="P9KFsi" name="JuceAudioCallBack.cpp" compile="1" resource="0"
+              file="Source/AudioCallback/JuceAudioCallBack.cpp"/>
+        <FILE id="PSnF3w" name="JuceAudioCallBack.h" compile="0" resource="0"
+              file="Source/AudioCallback/JuceAudioCallBack.h"/>
+      </GROUP>
+      <FILE id="Xjvhd7" name="AudioSetup.cpp" compile="1" resource="0" file="Source/AudioSetup.cpp"/>
+      <FILE id="uCddj3" name="AudioSetup.h" compile="0" resource="0" file="Source/AudioSetup.h"/>
+      <FILE id="YEybZ6" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="LereZT" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="Xx5AuH" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2015 targetFolder="Builds/VisualStudio2015" windowsTargetPlatformVersion="8.1">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="0" isDebug="1" optimisation="1" targetName="AudioPlayer"
+                       headerPath="../../Source/AudioCallback"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1" isDebug="0" optimisation="3" targetName="AudioPlayer"
+                       headerPath="../../Source/AudioCallback"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE-5.2.0/modules"/>
+      </MODULEPATHS>
+    </VS2015>
+    <ANDROIDSTUDIO targetFolder="Builds/Android">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" androidArchitectures="armeabi x86" isDebug="1" optimisation="1"
+                       linkTimeOptimisation="0" targetName="AudioPlayer"/>
+        <CONFIGURATION name="Release" androidArchitectures="" isDebug="0" optimisation="3"
+                       linkTimeOptimisation="1" targetName="AudioPlayer"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE-5.2.0/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE-5.2.0/modules"/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
